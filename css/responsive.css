@@ -1,0 +1,780 @@
+/* ==========================================
+   RESPONSIVE DESIGN
+   East Coast Estates & Staging
+========================================== */
+
+/* ==========================
+   Large Tablets
+========================== */
+
+@media (max-width: 992px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 1;
+  }
+
+  .hero-card {
+    order: 2;
+    max-width: 500px;
+    margin: 40px auto 0;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
+
+  .hero-text h2 {
+    font-size: 24px;
+  }
+}
+
+/* ==========================
+   Tablets
+========================== */
+
+@media (max-width: 949px) {
+  .top-bar {
+    display: none;
+  }
+
+
+
+  .mobile-contact a span {
+    overflow-wrap: anywhere;
+  }
+
+
+/* Keep the text white even if visited */
+.mobile-contact .quote-btn:visited,
+.mobile-contact .quote-btn:hover{
+    color: #fff;
+}
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 18px 0;
+  }
+
+  .quote-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display:flex;
+    cursor:pointer;
+    width:35px;
+    height:35px;
+    border-radius:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero {
+    padding: 100px 0;
+
+    min-height: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+
+/* ==========================
+   Phones
+========================== */
+
+@media (max-width: 576px) {
+  .container {
+    width: 92%;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+
+    line-height: 1.2;
+  }
+
+  .hero-text h2 {
+    font-size: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .hero-card {
+    padding: 25px;
+  }
+}
+
+/* ======================================
+   TRUST BAR
+====================================== */
+
+@media (max-width: 991px) {
+  .trust-bar .container {
+    display: grid;
+    gap: 25px;
+  }
+
+  .trust-box {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-bar {
+    padding: 60px 0;
+  }
+
+  .trust-box {
+    max-width: 400px;
+
+    margin: auto;
+  }
+
+  .trust-box i {
+    font-size: 40px;
+  }
+}
+
+/* ======================================
+   ABOUT
+====================================== */
+
+@media (max-width: 889px) {
+  .about {
+    padding: 80px 0;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+
+    gap: 60px;
+
+    text-align: center;
+  }
+
+  .about-image {
+    order: 1;
+  }
+
+  .about-content {
+    order: 2;
+  }
+
+  .about-image img {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: auto;
+  }
+
+  .about-content h2 {
+    font-size: 38px;
+  }
+
+  .about-list {
+    display: inline-block;
+
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 70px 0;
+  }
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .about-content h2 {
+    font-size: 26px;
+  }
+
+  .about-list li {
+    font-size: 15px;
+  }
+}
+
+/* ======================================
+   SERVICES
+====================================== */
+
+@media (max-width: 991px) {
+  .services {
+    padding: 80px 0;
+  }
+
+  .services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+  }
+
+  .service-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 70px 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    text-align: center;
+
+    max-width: 500px;
+
+    margin: auto;
+  }
+
+  .service-card i {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    padding: 60px 0;
+  }
+
+  .section-heading {
+    font-size: 30px;
+
+    text-align: center;
+  }
+
+  .section-tag {
+    display: block;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+}
+
+/* ==========================
+   Why grid
+========================== */
+
+ @media (max-width: 1000px) {
+        .why-grid {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+        }
+        .process-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px 10px;
+        }
+        .process-arrow {
+          display: none;
+        }
+        .gallery-exp-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .why-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+         @media (max-width: 390px) {
+        .why-grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+    /* ==========================
+  testimonilas
+========================== */
+@media (max-width:768px){
+
+    .testimonial-card{
+        flex:0 0 100%;
+    }
+
+    .slider-btn{
+        display:none;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .testimonial-card{
+        flex:0 0 100%;
+    }
+
+    .slider-btn{
+        display:none;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .testimonials{
+
+        padding:70px 0;
+
+    }
+
+    .testimonial-card{
+
+        padding:25px;
+
+    }
+
+    .testimonial-card p{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+    .author{
+
+        font-size:15px;
+
+    }
+
+    .stars{
+
+        font-size:16px;
+
+    }
+
+    .testimonials-header h2{
+
+        font-size:30px;
+
+    }
+
+    .testimonials-header .subheading{
+
+        font-size:15px;
+
+    }
+
+}
+
+@media (max-width:400px){
+
+    .testimonial-card{
+
+        padding:20px;
+
+    }
+
+    .testimonials-header h2{
+
+        font-size:26px;
+
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .testimonials-right{
+
+        padding:70px 0;
+
+    }
+
+    .testimonials-right h2{
+
+        font-size:32px;
+
+        text-align:center;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .testimonials-right{
+
+        padding:60px 0;
+
+    }
+
+    .testimonials-right h2{
+
+        font-size:28px;
+
+    }
+
+}
+
+/* map */
+/* ==========================================
+   SERVICE AREA RESPONSIVE
+========================================== */
+
+@media (max-width:991px){
+
+    .map-grid{
+
+        grid-template-columns:1fr;
+        gap:35px;
+
+    }
+
+    .map-wrapper{
+
+        order:1;
+
+    }
+
+    .map-locations{
+
+        order:2;
+        max-width:600px;
+        width:100%;
+        margin:0 auto;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .testimonials-right{
+
+        padding:70px 0;
+
+    }
+
+    .testimonials-right h2{
+
+        font-size:32px;
+        text-align:center;
+        line-height:1.3;
+
+    }
+
+    .process-ornament{
+
+        margin-bottom:35px;
+
+    }
+
+    .map-grid{
+
+        gap:30px;
+
+    }
+
+    .map-wrapper{
+
+        border-radius:12px;
+
+    }
+
+    .map-wrapper iframe{
+
+        height:320px;
+
+    }
+
+    .map-locations{
+
+        padding:30px 25px;
+        text-align:center;
+
+    }
+
+    .map-locations h3{
+
+        font-size:24px;
+        margin-bottom:20px;
+
+    }
+
+    .map-locations li{
+
+        padding:12px 0;
+        font-size:16px;
+
+    }
+
+    .and-more{
+
+        margin-top:20px;
+        font-size:15px;
+
+    }
+
+}
+@media (max-width:576px){
+
+    .testimonials-right{
+
+        padding:60px 0;
+
+    }
+
+    .testimonials-right h2{
+
+        font-size:28px;
+
+    }
+
+    .map-wrapper iframe{
+
+        height:250px;
+
+    }
+
+    .map-locations{
+
+        padding:20px;
+
+    }
+
+    .map-locations h3{
+
+        font-size:22px;
+
+    }
+
+    .map-locations li{
+
+        font-size:15px;
+        padding:10px 0;
+
+    }
+
+    .and-more{
+
+        font-size:14px;
+
+    }
+
+}
+@media (max-width:400px){
+
+    .testimonials-right h2{
+
+        font-size:24px;
+
+    }
+
+    .map-wrapper iframe{
+
+        height:220px;
+
+    }
+
+    .map-locations{
+
+        padding:18px;
+
+    }
+
+    .map-locations li{
+
+        font-size:14px;
+
+    }
+
+}
+/* ==========================================
+   CONTACT RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+
+  .contact{
+    padding: 80px 0;
+  }
+
+  .contact-grid{
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .contact-content{
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contact-content h2{
+    font-size: 36px;
+  }
+
+  .contact-details{
+    align-items: center;
+  }
+
+  .contact-item{
+    justify-content: center;
+  }
+
+  .contact-form{
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 35px;
+  }
+
+}
+@media (max-width:768px){
+
+  .contact{
+    padding:70px 0;
+  }
+
+  .contact-grid{
+    gap:45px;
+  }
+
+  .contact-content h2{
+    font-size:30px;
+  }
+
+  .contact-content p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .contact-form{
+    max-width:100%;
+    padding:30px 25px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea{
+    font-size:15px;
+    padding:14px;
+  }
+
+  .contact-form .btn{
+    width:100%;
+  }
+
+  .contact-item{
+    font-size:15px;
+  }
+
+  .contact-item i{
+    width:45px;
+    height:45px;
+    font-size:16px;
+  }
+
+}
+@media (max-width:576px){
+
+  .contact{
+    padding:60px 0;
+  }
+
+  .contact-content h2{
+    font-size:26px;
+  }
+
+  .contact-content p{
+    font-size:14px;
+  }
+
+  .contact-form{
+    padding:20px;
+    border-radius:12px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea{
+    padding:13px;
+    font-size:14px;
+  }
+
+  .contact-details{
+    gap:15px;
+  }
+
+  .contact-item{
+    justify-content:flex-start;
+     display:flex;
+    text-align:left;
+    
+  }
+
+  .contact-item i{
+    width:40px;
+    height:40px;
+    font-size:15px;
+  }
+
+  .contact-item span{
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+}

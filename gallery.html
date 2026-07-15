@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- header start -->
+    <div id="navbar"></div>
+    <!-- header ends -->
+    <section class="gallery-showcase">
+      <div class="container">
+        <div class="gallery-header">
+          <div class="gallery-title">
+            <span class="gallery-badge">
+              <i class="fa-solid fa-sparkles"></i>
+              Our Work
+            </span>
+
+            <h1>
+              Transformations across <br />
+              <span>Cape Breton homes.</span>
+            </h1>
+          </div>
+
+          <p>
+            A selection of recent projects — from full estate clear-outs to
+            buyer-ready staged interiors.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item large" data-category="before-after">
+            <img
+              src="assets/images/gallery1.jpg"
+              alt="Before and After"
+              class="gallery-img"
+            />
+
+            <figcaption class="gallery-caption">
+              Before / After
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="living-room">
+            <img
+              src="assets/images/gallery2.jpg"
+              alt="Living Room"
+              class="gallery-img"
+            />
+
+            <figcaption class="gallery-caption">
+              Living Room Staging
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="kitchen">
+            <img
+              src="assets/images/gallery3.jpg"
+              alt="Kitchen"
+              class="gallery-img"
+            />
+
+            <figcaption class="gallery-caption">
+              Coastal Kitchen
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="estate-clear-out">
+            <img
+              src="assets/images/gallery4.jpg"
+              alt="Estate"
+              class="gallery-img"
+            />
+
+            <figcaption class="gallery-caption">
+              Estate Clear-Out
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="bedroom">
+            <img
+              src="assets/images/gallery5.jpg"
+              alt="Bedroom"
+              class="gallery-img"
+            />
+
+            <figcaption class="gallery-caption">
+              Master Bedroom
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item wide" data-category="exterior">
+            <img
+              src="assets/images/gallery6.jpg"
+              alt="Exterior"
+              class="gallery-img"
+            />
+
+            <figcaption class="gallery-caption">
+              Home Exterior
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="downsizing">
+            <img
+              src="assets/images/gallery7.jpg"
+              alt="Downsizing"
+              class="gallery-img"
+            />
+
+            <figcaption class="gallery-caption">
+              Downsized Living
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item" data-category="family-room">
+            <img
+              src="assets/images/gallery8.jpg"
+              alt="Family Room"
+              class="gallery-img"
+            />
+
+            <figcaption class="gallery-caption">
+              Estate Family Room
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- footer starts -->
+    <div id="footer"></div>
+    <!-- footer ends -->
+
+    <!-- ==========================
+     IMAGE LIGHTBOX
+=========================== -->
+    <div class="lightbox" id="lightbox">
+      <!-- Close Button -->
+      <span class="lightbox-close">&times;</span>
+
+      <!-- Previous -->
+      <button class="lightbox-prev">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <!-- Image -->
+      <div class="lightbox-content">
+        <img src="" alt="Gallery Image" id="lightbox-img" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+
+      <!-- Next -->
+      <button class="lightbox-next">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- ==========
+   modal
+    =========== -->
+    <!-- Gallery Category Modal -->
+
+    <div class="gallery-modal" id="galleryModal">
+      <div class="gallery-modal-box">
+        <span class="gallery-modal-close"> &times; </span>
+
+        <h2 id="galleryTitle"></h2>
+
+        <p id="galleryCount"></p>
+
+        <div class="gallery-modal-grid" id="galleryGrid"></div>
+      </div>
+    </div>
+    <script src="js/gallery-data.js"></script>
+    <script src="js/gallery-modal.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/include.js"></script>
+  </body>
+</html>

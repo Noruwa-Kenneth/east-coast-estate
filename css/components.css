@@ -1,0 +1,132 @@
+/* ===================================
+   COMPONENTS
+   East Coast Estates & Staging
+=================================== */
+
+/* Buttons */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 32px;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all .3s ease;
+}
+
+.btn-primary{
+    background:#081058;
+    color:#fff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover{
+    background:#be9b2f;
+    transform:translateY(-3px);
+    transition: 0.9s;
+}
+
+.btn-outline{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#0B2C52;
+}
+
+/* Cards */
+.card{
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    overflow:hidden;
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 50px rgba(0,0,0,.12);
+}
+
+/* Section Heading */
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-header h2{
+    font-size:42px;
+    color:#0B2C52;
+    margin-bottom:15px;
+}
+
+.section-header p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+/* Icons */
+
+.icon-circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#f4f7fb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.icon-circle i{
+    color:#D4AF37;
+    font-size:32px;
+}
+
+/* Shadows */
+
+.shadow{
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+/* Border Radius */
+
+.radius{
+    border-radius:16px;
+}
+
+/* Reveal Animation */
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Image Hover */
+
+.image-hover{
+    overflow:hidden;
+    border-radius:16px;
+}
+
+.image-hover img{
+    transition:.4s;
+}
+
+.image-hover:hover img{
+    transform:scale(1.08);
+}
