@@ -45,7 +45,6 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="swipe/css/styles.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-
   </head>
 
   <body>
@@ -138,7 +137,34 @@
     <section class="about" id="about">
       <div class="container about-grid">
         <div class="about-image">
-          <img src="assets/images/gallery-1.jpg" alt="Estate Clear Out" />
+          <div class="before-after" id="beforeAfter">
+            <!-- Before Image -->
+            <img
+              src="assets/images/after.jpeg"
+              alt="Before"
+              class="before-img"
+            />
+
+            <!-- After Image -->
+            <div class="after-wrapper">
+              <img
+                src="assets/images/before.jpeg"
+                alt="After"
+                class="after-img"
+              />
+            </div>
+
+            <!-- Labels -->
+            <span class="label before-label">Before</span>
+            <span class="label after-label">After</span>
+
+            <!-- Divider -->
+            <div class="slider-line">
+              <div class="slider-handle">
+                <i class="fa-solid fa-arrows-left-right"></i>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="about-content">
@@ -363,7 +389,7 @@
     <section class="gallery" id="gallery">
       <div class="container">
         <div class="gallery-head">
-          <h2>Recent Work</h2>
+          <h2>Our Work</h2>
           <a href="#gallery" class="gallery-btn"
             >View Full Gallery <i class="fa-solid fa-arrow-right"></i
           ></a>
@@ -371,7 +397,7 @@
         <div class="gallery-exp-grid">
           <div class="gallery-item">
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600"
+              src="assets/images/estate-clearout.JPG"
               alt="Estate Clear-Out"
             />
             <div class="gallery-caption">Estate Clear-Out</div>
@@ -384,24 +410,15 @@
             <div class="gallery-caption">Downsizing</div>
           </div>
           <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600"
-              alt="Home Staging"
-            />
+            <img src="assets/images/homestaging.JPG" alt="Home Staging" />
             <div class="gallery-caption">Home Staging</div>
           </div>
           <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600"
-              alt="Estate Sales"
-            />
+            <img src="assets/images/service4.jpg" alt="Estate Sales" />
             <div class="gallery-caption">Estate Sales</div>
           </div>
           <div class="gallery-item">
-            <img
-              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600"
-              alt="Before & After"
-            />
+            <img src="assets/images/beaf.jpeg" alt="Before & After" />
             <div class="gallery-caption">Before &amp; After</div>
           </div>
         </div>
@@ -411,177 +428,206 @@
 
     <!-- Testimonials Starts-->
     <section class="testimonial">
-      <div class="container-testimonial">
-        <h2 class="testimonial__title">WHAT <br />OUR CUSTOMERS SAY</h2>
-        <p class="testimony">
-          Real stories from families we've helped acrooss Cape Breton.
-        </p>
-        <div class="testimonial__swiper container swiper">
-          <div class="swiper-wrapper">
-            <article class="testimonial__card swiper-slide">
-              <img
-                src="swipe/img/avatar-1.png"
-                alt="image"
-                class="testimonial__img"
-              />
+      <h2 class="testimonial__title">WHAT OUR CUSTOMERS SAY</h2>
+      <p class="testimony">Real stories from families we've helped.</p>
+      <div class="testimonial__swiper container swiper">
+        <div class="swiper-wrapper">
+          <article class="testimonial__card swiper-slide">
+            <img
+              src="swipe/img/avatar-1.png"
+              alt="image"
+              class="testimonial__img"
+            />
 
-              <h3 class="testimonial__name">Damyz Julz</h3>
+            <h3 class="testimonial__name">Damyz Julz</h3>
 
-              <div class="testimonial__rating">
-                <div class="testimonial__stars">
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                </div>
-
-                <h3 class="testimonial__number">5.0</h3>
+            <div class="testimonial__rating">
+              <div class="testimonial__stars">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
               </div>
 
-              <p class="testimonial__description">
-                The company offers many easy-to-use services, with hard work and
-                round-the-clock support on all projects.
-              </p>
-            </article>
+              <h3 class="testimonial__number">5.0</h3>
+            </div>
 
-            <article class="testimonial__card swiper-slide">
-              <img
-                src="swipe/img/avatar-2.png"
-                alt="image"
-                class="testimonial__img"
-              />
+            <p class="testimonial__description">
+              The company offers many easy-to-use services, with hard work and
+              round-the-clock support on all projects.
+            </p>
+          </article>
 
-              <h3 class="testimonial__name">Taylor Carter</h3>
+          <article class="testimonial__card swiper-slide">
+            <img
+              src="swipe/img/avatar-2.png"
+              alt="image"
+              class="testimonial__img"
+            />
 
-              <div class="testimonial__rating">
-                <div class="testimonial__stars">
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                </div>
+            <h3 class="testimonial__name">Taylor Carter</h3>
 
-                <h3 class="testimonial__number">5.0</h3>
+            <div class="testimonial__rating">
+              <div class="testimonial__stars">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
               </div>
 
-              <p class="testimonial__description">
-                The company offers many easy-to-use services, with hard work and
-                round-the-clock support on all projects.
-              </p>
-            </article>
+              <h3 class="testimonial__number">5.0</h3>
+            </div>
 
-            <article class="testimonial__card swiper-slide">
-              <img
-                src="swipe/img/avatar-3.png"
-                alt="image"
-                class="testimonial__img"
-              />
+            <p class="testimonial__description">
+              The company offers many easy-to-use services, with hard work and
+              round-the-clock support on all projects.
+            </p>
+          </article>
 
-              <h3 class="testimonial__name">Rina Ownel</h3>
+          <article class="testimonial__card swiper-slide">
+            <img
+              src="swipe/img/avatar-3.png"
+              alt="image"
+              class="testimonial__img"
+            />
 
-              <div class="testimonial__rating">
-                <div class="testimonial__stars">
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                </div>
+            <h3 class="testimonial__name">Rina Ownel</h3>
 
-                <h3 class="testimonial__number">5.0</h3>
+            <div class="testimonial__rating">
+              <div class="testimonial__stars">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
               </div>
 
-              <p class="testimonial__description">
-                The company offers many easy-to-use services, with hard work and
-                round-the-clock support on all projects.
-              </p>
-            </article>
+              <h3 class="testimonial__number">5.0</h3>
+            </div>
 
-            <article class="testimonial__card swiper-slide">
-              <img
-                src="swipe/img/avatar-4.png"
-                alt="image"
-                class="testimonial__img"
-              />
+            <p class="testimonial__description">
+              The company offers many easy-to-use services, with hard work and
+              round-the-clock support on all projects.
+            </p>
+          </article>
 
-              <h3 class="testimonial__name">Jhon Patel</h3>
+          <article class="testimonial__card swiper-slide">
+            <img
+              src="swipe/img/avatar-4.png"
+              alt="image"
+              class="testimonial__img"
+            />
 
-              <div class="testimonial__rating">
-                <div class="testimonial__stars">
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                  <i class="ri-star-fill"></i>
-                </div>
+            <h3 class="testimonial__name">John Patel</h3>
 
-                <h3 class="testimonial__number">5.0</h3>
+            <div class="testimonial__rating">
+              <div class="testimonial__stars">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
               </div>
 
-              <p class="testimonial__description">
-                The company offers many easy-to-use services, with hard work and
-                round-the-clock support on all projects.
-              </p>
-            </article>
-          </div>
+              <h3 class="testimonial__number">5.0</h3>
+            </div>
 
-          <!-- Pagination -->
-          <div class="swiper-pagination"></div>
+            <p class="testimonial__description">
+              The company offers many easy-to-use services, with hard work and
+              round-the-clock support on all projects.
+            </p>
+          </article>
+        </div>
 
-          <!-- Navigation buttons -->
-          <div class="swiper-button-prev">
-            <i class="ri-arrow-left-long-line"></i>
-          </div>
-          <div class="swiper-button-next">
-            <i class="ri-arrow-right-long-line"></i>
-          </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-prev">
+          <i class="ri-arrow-left-long-line"></i>
+        </div>
+        <div class="swiper-button-next">
+          <i class="ri-arrow-right-long-line"></i>
         </div>
       </div>
     </section>
     <!-- Testimonials ends-->
 
-    <!-- map starts-->
-    <section>
-      <div class="service-area">
-        <div class="container">
-          <h2>Proudly Serving Cape Breton</h2>
-          <div class="ornament process-ornament">
-            <i class="fa-solid fa-diamond"></i>
+    <!-- meet the team start-->
+    <!-- ==========================
+        MEET THE FOUNDER
+=========================== -->
+    <section class="founder-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"> Meet the Founder </span>
+
+          <h2>The heart behind every home we touch.</h2>
+
+          <p>
+            Every project begins with compassion, respect, and a commitment to
+            helping Cape Breton families through life's important transitions.
+          </p>
+        </div>
+
+        <div class="founder-grid">
+          <!-- Left -->
+
+          <div class="founder-content">
+            <h3>Kayla</h3>
+
+            <span class="founder-role"> Founder & Lead Consultant </span>
+
+            <p>
+              Sarah founded East Coast Estates & Staging after experiencing
+              firsthand how overwhelming estate transitions can be. She wanted
+              to provide families throughout Cape Breton with a caring,
+              trustworthy service that makes every step easier.
+            </p>
+
+            <p>
+              From estate clear-outs and downsizing to home staging and estate
+              sales, Sarah approaches every project with patience,
+              professionalism, and genuine respect for every family's unique
+              story.
+            </p>
+
+            <p>
+              Outside of work, Sarah enjoys exploring Cape Breton's beautiful
+              coastline, supporting local businesses, and building lasting
+              relationships with the families she serves.
+            </p>
+
+            <img src="assets/images/signature.png" alt="Sarah's Signature" class="signature">
+
+            <div class="founder-buttons">
+              <a href="contact.html" class="kay-button">
+                Work With Kayla
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="tel:9023015315" class="button-outline">
+                (902) 301-5315
+              </a>
+            </div>
           </div>
-          <div class="map-grid">
-            <div class="map-wrapper">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d177266.9867457672!2d-60.3669!3d46.1389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b5c362a4a7b5e53%3A0x4e2d9e4c4f0d8c57!2sCape%20Breton!5e0!3m2!1sen!2sca"
-                title="Map of Cape Breton service area"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-            <div class="map-locations">
-              <h3>Service Areas</h3>
-              <ul>
-                <li>Sydney</li>
-                <li>Glace Bay</li>
-                <li>North Sydney</li>
-                <li>New Waterford</li>
-                <li>Louisbourg</li>
-                <li>Membertou</li>
-              </ul>
-              <div class="and-more">...and surrounding communities</div>
-            </div>
+
+          <!-- Right -->
+
+          <div class="founder-image">
+            <img
+              src="assets/images/founder.jpg"
+              alt="Kayla- Founder of East Coast Estates & Staging"
+            />
           </div>
         </div>
       </div>
     </section>
+    <!-- meet the team ens-->
 
-    <!-- map ends-->
-
-    <!-- ==========================================
-     CONTACT
-========================================== -->
-
+    <!-- contact start -->
     <section class="contact" id="contact">
       <div class="container">
         <div class="contact-grid">
@@ -596,24 +642,26 @@
               us today for a free consultation and estimate.
             </p>
 
-            <a href="contact.html" class="btn btn-primary"> Get Free Estimate </a>
+            <a href="contact.html" class="btn btn-primary">
+              Get Free Estimate
+            </a>
           </div>
         </div>
       </div>
     </section>
-    <!--  -->
+    <!-- contact end -->
+
     <!-- footer starts -->
     <div id="footer"></div>
     <!-- footer ends -->
-      <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/include.js"></script>
-   
 
     <!--=============== SWIPER JS ===============-->
     <script src="swipe/js/swiper-bundle.min.js"></script>
 
     <!--=============== MAIN JS ===============-->
     <script src="swipe/js/main.js"></script>
-    
+    <script src="js/image-slider.js"></script>
   </body>
 </html>

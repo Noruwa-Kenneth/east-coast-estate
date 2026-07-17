@@ -29,9 +29,9 @@ function openLightbox(index) {
     const caption =
         galleryImages[currentIndex]
             .closest(".gallery-item")
-            .querySelector("figcaption").innerHTML;
+            .querySelector("figcaption").textContent.trim();
 
-    lightboxCaption.innerHTML = caption;
+    lightboxCaption.textContent = caption;
 
     lightbox.classList.add("show");
     document.body.style.overflow = "hidden";
@@ -72,9 +72,9 @@ function nextImage(){
     const caption =
     galleryImages[currentIndex]
         .closest(".gallery-item")
-        .querySelector("figcaption").innerHTML;
+        .querySelector("figcaption").textContent.trim();
 
-lightboxCaption.innerHTML = caption;
+lightboxCaption.textContent = caption;
 
 }
 
@@ -100,9 +100,9 @@ function prevImage(){
     const caption =
     galleryImages[currentIndex]
         .closest(".gallery-item")
-        .querySelector("figcaption").innerHTML;
+        .querySelector("figcaption").textContent.trim();
 
-lightboxCaption.innerHTML = caption;
+lightboxCaption.textContent = caption;
 
 }
 

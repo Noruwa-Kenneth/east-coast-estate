@@ -6,13 +6,13 @@ const swiperTestimonial = new Swiper('.testimonial__swiper', {
    spaceBetween: 16,
    grabCursor: true,
    speed: 600,
-   effect: 'coverflow',
-   coverflowEffect:{
-      rotate: -90,
-      depth: 600,
-      modifier: .5,
-      slideShadows: false,
-   },
+   // effect: 'coverflow',
+   // coverflowEffect:{
+   //    rotate: -90,
+   //    depth: 600,
+   //    modifier: .5,
+   //    slideShadows: false,
+   // },
 
    pagination: {
       el: '.swiper-pagination',

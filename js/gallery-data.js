@@ -6,66 +6,79 @@ const galleryData = {
 
     "before-after": [
         {
-            src: "assets/images/gallery1.jpg",
-            title: "Before / After"
-        },
-        {
-            src: "assets/images/gallery1-2.jpg",
-            title: "Project Complete"
-        }
-    ],
-
-    "living-room": [
-        {
-            src: "assets/images/gallery2.jpg",
+            src: "assets/gallery/beaf1.jpg",
             title: "Living Room"
         },
         {
-            src: "assets/images/gallery2-2.jpg",
-            title: "Living Room View"
+            src: "assets/gallery/beaf2.jpg",
+            title: "kitchen"
+        },
+         {
+            src: "assets/gallery/beaf3.jpg",
+            title: "Basement"
+        },
+         {
+             src: "assets/gallery/beaf4.jpg",
         }
     ],
 
-    "kitchen": [
+    "clearance-sales": [
         {
-            src: "assets/images/gallery3.jpg",
-            title: "Kitchen"
+             src: "assets/gallery/sales1.jpeg",
+            title: "clearance sales"
+        },
+        {
+            src: "assets/gallery/sales2.jpeg",
+             title: "Utensils sales"    
+        },
+         {
+            src: "assets/gallery/sales3.jpeg",
+            title: "property sales"  
+        },
+         {
+            src: "assets/gallery/sales4.jpeg",
+             title: "cloths sales"    
+        },
+         {
+            src: "assets/gallery/sales5.jpeg",
+             title: "Antique Furniture"    
         }
     ],
 
     "estate-clear-out": [
         {
-            src: "assets/images/gallery4.jpg",
-            title: "Estate Clear-Out"
+             src: "assets/gallery/clear1.jpeg",
+        },
+         {
+             src: "assets/gallery/clear2.jpeg",
+        },
+         {
+             src: "assets/gallery/clear3.jpeg",
+        },
+         {
+             src: "assets/gallery/clear4.jpeg",
         }
     ],
 
-    "bedroom": [
+ 
+    "Home staging": [
         {
-            src: "assets/images/gallery5.jpg",
-            title: "Master Bedroom"
+             src: "assets/gallery/staging1.jpeg",
+        },
+         {
+             src: "assets/gallery/staging2.jpeg",
+        },
+         {
+             src: "assets/gallery/staging3.jpeg",
+        },
+         {
+             src: "assets/gallery/staging4.jpeg",
         }
     ],
 
-    "exterior": [
+     "Downsizing": [
         {
-            src: "assets/images/gallery6.jpg",
-            title: "Home Exterior"
-        }
+             src: "assets/gallery/downsizing1.jpeg",
+        },
     ],
-
-    "downsizing": [
-        {
-            src: "assets/images/gallery7.jpg",
-            title: "Downsized Living"
-        }
-    ],
-
-    "family-room": [
-        {
-            src: "assets/images/gallery8.jpg",
-            title: "Estate Family Room"
-        }
-    ]
-
 };

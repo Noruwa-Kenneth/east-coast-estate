@@ -37,10 +37,10 @@ function openGallery(category){
 
         figure.className = "gallery-modal-item";
 
-        figure.innerHTML = `
-            <img src="${image.src}" alt="${image.title}">
-            <figcaption>${image.title}</figcaption>
-        `;
+       figure.innerHTML = `
+    <img src="${image.src}" alt="${image.title || ''}">
+    ${image.title ? `<figcaption>${image.title}</figcaption>` : ""}
+`;
 
         modalGrid.appendChild(figure);
 

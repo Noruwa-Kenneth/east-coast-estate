@@ -300,3 +300,112 @@ ul {
 .hero-card ul li:last-child {
   border-bottom: none;
 }
+
+/* image slider */
+
+.before-after{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/10;
+    overflow:hidden;
+    border-radius:20px;
+    cursor:ew-resize;
+    user-select:none;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.before-after img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.before-img{
+    position:absolute;
+    inset:0;
+}
+
+.after-wrapper{
+    position:absolute;
+    inset:0;
+    width:50%;
+    overflow:hidden;
+}
+
+.after-img{
+    position:absolute;
+    inset:0;
+}
+
+.slider-line{
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    transform:translateX(-50%);
+
+    /* Frosted line */
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.4),
+        0 0 20px rgba(0,0,0,.2);
+}
+
+.slider-handle{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    width:56px;
+    height:56px;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* Glass effect */
+    background:rgba(255,255,255,.25);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    color:#0b63ce62;
+    font-size:20px;
+
+    border:1px solid rgba(255,255,255,.6);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25),
+        inset 0 1px 1px rgba(255,255,255,.5);
+
+    transition:all .35s ease;
+}
+
+.label{
+    position:absolute;
+    top:20px;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.before-label{
+    left:20px;
+    background:rgba(0,0,0,.6);
+    color:#fff;
+}
+
+.after-label{
+    right:20px;
+    background:#0b63ce;
+    color:#fff;
+}
