@@ -23,24 +23,28 @@
   overflow: hidden;
    padding: 20px 0;
   background-color: rgb(255, 255, 255);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .testimonial__swiper {
   padding-bottom: 5rem;
   padding-top:1rem;
   background-color: rgb(255, 255, 255);
+  border-radius: 15px;
 }
 
 .testimonial__title {
   font-size: 30px;
   text-align: center;
-
+  color: rgb(20, 50, 105);
 
 }
 
+
 .testimonial__card {
   width: 280px;
-  height: 340px;
+  height: 300px;
   background-color: white;
   box-shadow: 0 8px 16px hsla(265, 75%, 4%, .1);
   padding: 1rem 1.5rem 10rem;
@@ -87,7 +91,7 @@
 text-align: center;
   margin-bottom: 1rem;
    max-width: 650px;
-color: var(--gray);
+color: rgb(14, 41, 116);
     font-size: 1.1rem;
     line-height: 1.8;
 }

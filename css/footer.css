@@ -71,33 +71,53 @@
   line-height: 1.6;
 }
 
-.footer-contact i {
-  color: #d4af37;
-  font-size: 1rem;
+.footer-contact p i {
+  color: var(--secondary);
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+.footer-contact p {
+  transition: color 0.3s ease;
+}
+
+.footer-contact p:hover {
+  color: var(--secondary);
+}
+
+.footer-contact p:hover i {
+  transform: scale(1.1);
+}
+
+.footer-contact p i {
+  transition: transform 0.3s ease;
 }
 
 .social-icons {
   display: flex;
   gap: 12px;
   margin-top: 1.5rem;
+
 }
 
 .social-icons a {
   width: 42px;
   height: 42px;
-  background: rgba(255,255,255,0.08);
+  background: #ffffff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
   text-decoration: none;
   transition: 0.3s;
+  z-index: 10;
+  color: #e7db36;
 }
 
 .social-icons a:hover {
-  background: #d4af37;
-  color: #0f172a;
+  background: #fffdfd;
+  color: #144261;
   transform: translateY(-4px);
 }
 

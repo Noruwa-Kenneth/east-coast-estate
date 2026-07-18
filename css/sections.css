@@ -31,45 +31,11 @@ section {
 }
 
 /* ===================================
-   TRUST BAR
-=================================== */
-
-.trust-bar {
-  background: #0b2c52;
-  color: white;
-  padding: 60px 0;
-}
-
-.trust-bar .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-}
-
-.trust-box {
-  text-align: center;
-}
-
-.trust-box i {
-  font-size: 42px;
-  color: #d4af37;
-  margin-bottom: 20px;
-}
-
-.trust-box h3 {
-  margin-bottom: 10px;
-}
-
-.trust-box p {
-  opacity: 0.9;
-}
-
-/* ===================================
    ABOUT
 =================================== */
 
 .about {
-  padding: 40px 0;
+  padding:10px 10;
   background: #fff;
 }
 
@@ -178,6 +144,7 @@ section {
   background: var(--primary-dark);
   color: #fff;
   padding: 30px 0 80px;
+  margin-top: 1rem;
 }
 .why-heading {
   text-align: center;
@@ -242,6 +209,8 @@ section {
   background: #f2f4fa;
   padding: 10px 0 40px;
   margin-top: 1rem;
+   display: flex;
+  align-items: center;
 }
 
 .process-heading h2 {
@@ -266,22 +235,8 @@ section {
   gap: 0;
   margin-top: 20px;
 }
-.process-step {
-  text-align: center;
-  max-width: 140px;
-}
-.process-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: var(--primary);
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  margin-bottom: 14px;
-}
+
+
 .process-step .step-label {
   font-size: 0.8rem;
   color: var(--muted);
@@ -297,49 +252,150 @@ section {
   font-size: 0.82rem;
   line-height: 1.5;
 }
-.process-arrow {
-    position: relative;
-    width: 140px;          /* Distance between circles */
-    height: 60px;          /* Same height as icon */
-    display: flex;
-    align-items: center;
-    margin-top: 0;
+
+
+/* =========================
+   WRAPPER
+========================= */
+.process-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Gray line */
-.process-arrow::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -8px;
-    right: -8px;
-    height: 3px;
-    background: #d7d7d7;
-    transform: translateY(-50%);
-    border-radius: 50px;
+/* =========================
+   PROGRESS CONTAINER
+========================= */
+.progress-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Gray background line */
+.progress-container::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  right: 50px;
+  height: 4px;
+  background: #e0e0e0;
+  z-index: 1;
 }
 
 /* Blue progress line */
-.process-arrow::after {
-    content: "";
+.progress {
     position: absolute;
-    top: 50%;
-    left: -8px;
+    top: 35px;
+    left: 50px;
+    height: 4px;
     width: 0;
-    height: 3px;
-    background: var(--primary);
-    transform: translateY(-50%);
-    border-radius: 50px;
-    transition: width .4s ease;
+    background: linear-gradient(90deg, #e24aa3, #0b3564);
+    z-index: 2;
+    transition: width 0.4s ease;
+    transform-origin: left center;
 }
 
-.process-arrow i{
-    display:none;
+/* =========================
+   STEPS
+========================= */
+.process-step {
+  position: relative;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
 }
 
-.process-arrow.active::after{
-    width:160px;
+/* Circle */
+.process-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+   background: #fafdff;
+  border: 4px solid #e0e0e0;
+   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #acaeb1;
+  margin-bottom: 12px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
+
+/* Step label */
+.step-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 6px;
+  letter-spacing: .5px;
+}
+
+/* =========================
+   ACTIVE STEP
+========================= */
+.process-step.active .process-icon {
+  border: 4px solid #e0e0e0;
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+
+/* =========================
+   HOVER
+========================= */
+.process-step:hover .process-icon {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(74, 144, 226, 0.2);
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .process-wrapper {
+    padding: 30px 20px;
+  }
+
+  .process-step {
+    width: 110px;
+  }
+
+  .process-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .progress-container::after,
+  .progress {
+    top: 30px;
+    left: 30px;
+    right: 30px;
+  }
+
+  .process-step h4 {
+    font-size: 16px;
+  }
+
+  .process-step p {
+    font-size: 13px;
+  }
+}
+
 
 /* Gallery */
 .gallery {
@@ -594,7 +650,7 @@ section {
 
 .contact {
   background: #0b2c52;
-
+  margin-bottom: 1rem;
   color: white;
 }
 
@@ -637,7 +693,7 @@ section {
 .contact-content h2 {
   font-size: 42px;
   color: #ffffff;
-  margin: 10px 0;
+  margin: 5px 0;
   align-items: center;
 }
 
