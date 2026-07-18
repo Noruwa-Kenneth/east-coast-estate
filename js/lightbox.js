@@ -55,7 +55,7 @@ function nextImage(){
 
     lightboxImg.classList.add("lightbox-img-changing");
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         currentIndex++;
 
@@ -65,16 +65,17 @@ function nextImage(){
 
         lightboxImg.src = galleryImages[currentIndex].src;
 
+        const caption =
+            galleryImages[currentIndex]
+                .closest(".gallery-item")
+                .querySelector("figcaption")
+                .textContent.trim();
+
+        lightboxCaption.textContent = caption;
+
         lightboxImg.classList.remove("lightbox-img-changing");
 
-    },180);
-
-    const caption =
-    galleryImages[currentIndex]
-        .closest(".gallery-item")
-        .querySelector("figcaption").textContent.trim();
-
-lightboxCaption.textContent = caption;
+    }, 180);
 
 }
 
@@ -84,25 +85,27 @@ function prevImage(){
 
     lightboxImg.classList.add("lightbox-img-changing");
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         currentIndex--;
 
         if(currentIndex < 0){
-            currentIndex = galleryImages.length-1;
+            currentIndex = galleryImages.length - 1;
         }
 
         lightboxImg.src = galleryImages[currentIndex].src;
 
+        const caption =
+            galleryImages[currentIndex]
+                .closest(".gallery-item")
+                .querySelector("figcaption")
+                .textContent.trim();
+
+        lightboxCaption.textContent = caption;
+
         lightboxImg.classList.remove("lightbox-img-changing");
 
-    },180);
-    const caption =
-    galleryImages[currentIndex]
-        .closest(".gallery-item")
-        .querySelector("figcaption").textContent.trim();
-
-lightboxCaption.textContent = caption;
+    }, 180);
 
 }
 

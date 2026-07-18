@@ -268,7 +268,7 @@ section {
 }
 .process-step {
   text-align: center;
-  max-width: 150px;
+  max-width: 140px;
 }
 .process-icon {
   width: 60px;
@@ -298,22 +298,47 @@ section {
   line-height: 1.5;
 }
 .process-arrow {
-  display: flex;
-  align-items: center;
-  color: #000000;
-  padding: 0 12px;
-  margin-top: 22px;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
+    position: relative;
+    width: 140px;          /* Distance between circles */
+    height: 60px;          /* Same height as icon */
+    display: flex;
+    align-items: center;
+    margin-top: 0;
 }
+
+/* Gray line */
 .process-arrow::before {
-  content: "";
-  width: 40px;
-  height: 1px;
-  background: #000000;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    right: -8px;
+    height: 3px;
+    background: #d7d7d7;
+    transform: translateY(-50%);
+    border-radius: 50px;
 }
-.process-arrow i {
-  margin-left: -4px;
+
+/* Blue progress line */
+.process-arrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    width: 0;
+    height: 3px;
+    background: var(--primary);
+    transform: translateY(-50%);
+    border-radius: 50px;
+    transition: width .4s ease;
+}
+
+.process-arrow i{
+    display:none;
+}
+
+.process-arrow.active::after{
+    width:160px;
 }
 
 /* Gallery */

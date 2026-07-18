@@ -316,7 +316,7 @@
    Why grid
 ========================== */
 
- @media (max-width: 1000px) {
+ @media (max-width: 1085px) {
         .why-grid {
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
@@ -589,32 +589,6 @@
         height:250px;
 
     }
-
-    .map-locations{
-
-        padding:20px;
-
-    }
-
-    .map-locations h3{
-
-        font-size:22px;
-
-    }
-
-    .map-locations li{
-
-        font-size:15px;
-        padding:10px 0;
-
-    }
-
-    .and-more{
-
-        font-size:14px;
-
-    }
-
 }
 @media (max-width:400px){
 

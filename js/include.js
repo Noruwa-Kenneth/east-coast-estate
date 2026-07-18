@@ -86,3 +86,22 @@ counters.forEach(counter => {
     });
 
 });
+
+// timeline
+
+const steps = document.querySelectorAll(".process-step");
+const arrows = document.querySelectorAll(".process-arrow");
+
+steps.forEach((step, index) => {
+
+    step.addEventListener("mouseenter", () => {
+
+        arrows.forEach(arrow => arrow.classList.remove("active"));
+
+        for(let i = 0; i < index; i++){
+            arrows[i].classList.add("active");
+        }
+
+    });
+
+});
