@@ -31,6 +31,16 @@ function updateProgress() {
 
         progress.style.width = (end - start) + "px";
     }
+
+    if (window.innerWidth <= 865) {
+
+    steps[currentStep - 1].scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest"
+    });
+
+}
 }
 
 // Auto move every 5 seconds
@@ -52,4 +62,32 @@ window.addEventListener("resize", updateProgress);
 updateProgress();
 
 // Auto play every 5 seconds
-setInterval(nextStep, 3000);
+let autoPlay = setInterval(nextStep, 5000);
+
+let startX = 0;
+
+const container = document.querySelector(".progress-container");
+
+container.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+});
+
+container.addEventListener("touchend", e => {
+
+    const endX = e.changedTouches[0].clientX;
+    const distance = startX - endX;
+
+    if (distance > 50 && currentStep < steps.length) {
+        currentStep++;
+        updateProgress();
+    }
+
+    if (distance < -50 && currentStep > 1) {
+        currentStep--;
+        updateProgress();
+    }
+
+    clearInterval(autoPlay);
+    autoPlay = setInterval(nextStep, 5000);
+
+});

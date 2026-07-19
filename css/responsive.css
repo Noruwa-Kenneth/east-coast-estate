@@ -140,36 +140,6 @@
   }
 }
 
-/* ======================================
-   TRUST BAR
-====================================== */
-
-@media (max-width: 991px) {
-  .trust-bar .container {
-    display: grid;
-    gap: 25px;
-  }
-
-  .trust-box {
-    padding: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .trust-bar {
-    padding: 60px 0;
-  }
-
-  .trust-box {
-    max-width: 400px;
-
-    margin: auto;
-  }
-
-  .trust-box i {
-    font-size: 40px;
-  }
-}
 
 /* ======================================
    ABOUT
@@ -321,13 +291,6 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
         }
-        .process-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 30px 10px;
-        }
-        .process-arrow {
-          display: none;
-        }
         .gallery-exp-grid {
           grid-template-columns: repeat(2, 1fr);
         }
@@ -344,231 +307,12 @@
         }
       }
 
-    /* ==========================
-  testimonilas
-========================== */
 @media (max-width:768px){
-
-    .testimonial-card{
-        flex:0 0 100%;
-    }
-
-    .slider-btn{
-        display:none;
-    }
-
-}
-
-@media (max-width:768px){
-
-    .testimonial-card{
-        flex:0 0 100%;
-    }
-
-    .slider-btn{
-        display:none;
-    }
-
-}
-
-@media (max-width:576px){
-
-    .testimonials{
-
-        padding:70px 0;
-
-    }
-
-    .testimonial-card{
-
-        padding:25px;
-
-    }
-
-    .testimonial-card p{
-
-        font-size:15px;
-
-        line-height:1.7;
-
-    }
-
-    .author{
-
-        font-size:15px;
-
-    }
-
-    .stars{
-
-        font-size:16px;
-
-    }
-
-    .testimonials-header h2{
-
-        font-size:30px;
-
-    }
-
-    .testimonials-header .subheading{
-
-        font-size:15px;
-
-    }
-
-}
-
-@media (max-width:400px){
-
-    .testimonial-card{
-
-        padding:20px;
-
-    }
-
-    .testimonials-header h2{
-
-        font-size:26px;
-
-    }
-
-}
-
-
-@media (max-width:768px){
-
-    .testimonials-right{
-
-        padding:70px 0;
-
-    }
-
-    .testimonials-right h2{
-
-        font-size:32px;
-
-        text-align:center;
-
-    }
-
-}
-
-@media (max-width:576px){
-
-    .testimonials-right{
-
-        padding:60px 0;
-
-    }
-
-    .testimonials-right h2{
-
-        font-size:28px;
-
-    }
-
-}
-
-/* map */
-/* ==========================================
-   SERVICE AREA RESPONSIVE
-========================================== */
-
-@media (max-width:991px){
-
-    .map-grid{
-
-        grid-template-columns:1fr;
-        gap:35px;
-
-    }
-
-    .map-wrapper{
-
-        order:1;
-
-    }
-
-    .map-locations{
-
-        order:2;
-        max-width:600px;
-        width:100%;
-        margin:0 auto;
-
-    }
-
-}
-
-@media (max-width:768px){
-
-    .testimonials-right{
-
-        padding:70px 0;
-
-    }
-
-    .testimonials-right h2{
-
-        font-size:32px;
-        text-align:center;
-        line-height:1.3;
-
-    }
-
     .process-ornament{
 
         margin-bottom:35px;
 
     }
-
-    .map-grid{
-
-        gap:30px;
-
-    }
-
-    .map-wrapper{
-
-        border-radius:12px;
-
-    }
-
-    .map-wrapper iframe{
-
-        height:320px;
-
-    }
-
-    .map-locations{
-
-        padding:30px 25px;
-        text-align:center;
-
-    }
-
-    .map-locations h3{
-
-        font-size:24px;
-        margin-bottom:20px;
-
-    }
-
-    .map-locations li{
-
-        padding:12px 0;
-        font-size:16px;
-
-    }
-
-    .and-more{
-
-        margin-top:20px;
-        font-size:15px;
-
-    }
-
 }
 @media (max-width:576px){
 
@@ -751,4 +495,70 @@
     overflow-wrap: anywhere;
 }
 
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 865px) {
+
+  .process-wrapper {
+    overflow: hidden;
+    padding: 25px 20px;
+  }
+
+  .progress-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .progress-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .progress-container::after,
+  .progress {
+    display: none;
+  }
+
+  .process-step {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    scroll-snap-align: center;
+
+    padding: 10px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .process-step h4 {
+    font-size: 1.2rem;
+  }
+
+  .process-step p {
+    max-width: 280px;
+    font-size: .95rem;
+  }
 }

@@ -362,39 +362,6 @@ section {
 
 
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  .process-wrapper {
-    padding: 30px 20px;
-  }
-
-  .process-step {
-    width: 110px;
-  }
-
-  .process-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 22px;
-  }
-
-  .progress-container::after,
-  .progress {
-    top: 30px;
-    left: 30px;
-    right: 30px;
-  }
-
-  .process-step h4 {
-    font-size: 16px;
-  }
-
-  .process-step p {
-    font-size: 13px;
-  }
-}
 
 
 /* Gallery */
