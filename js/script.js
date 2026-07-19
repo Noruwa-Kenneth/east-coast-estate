@@ -3,6 +3,11 @@
    Main JavaScript
 ========================================== */
 
+// Always start at the top when the page loads
+window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
+});
+
 // ===============================
 // Mobile Navigation
 // ===============================

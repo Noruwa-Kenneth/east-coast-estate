@@ -211,29 +211,33 @@
 
     <!-- review form start-->
     <section class="review-section">
-      <div class="review-header">
-        <h2>Share Your Experience</h2>
-        <p>
-          We'd love to hear about your experience with East Coast Estates &
-          Staging. Your feedback helps us improve and assists future clients.
-        </p>
-      </div>
+      <div class="background"></div>
 
-      <form id="review-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
+      <div class="container">
+        <!-- Header -->
+
+        <div class="review-header">
+          <div class="badge">
+            <i class="ri-double-quotes-l"></i>
+
+            <span>Share Your Story</span>
           </div>
 
-          <div class="form-group">
-            <label>Your Rating</label>
+          <h1>Leave a Review</h1>
+
+          <p>
+            Your words help other Cape Breton families feel confident choosing
+            us during an important chapter in their lives.
+          </p>
+        </div>
+
+        <!-- Form -->
+
+        <form id="review-form">
+          <!-- Rating -->
+
+          <div class="rating-card">
+            <p class="rating-title">Your Rating</p>
 
             <div class="star-rating">
               <i class="ri-star-fill" data-value="1"></i>
@@ -244,21 +248,114 @@
 
               <input type="hidden" id="rating" name="rating" value="0" />
             </div>
+
+            <p class="rating-text">Tap a star to rate</p>
+
+            <small class="error" id="rating-error"></small>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="review">Your Review</label>
-          <textarea
-            id="review"
-            name="review"
-            placeholder="Tell us about your experience..."
-            required
-          ></textarea>
-        </div>
+          <!-- Row 1 -->
 
-        <button type="submit">Submit Review</button>
-      </form>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name"> Full Name </label>
+
+              <input
+                type="text"
+                id="review-name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+
+              <small class="error" id="review-name-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email"> Email </label>
+
+              <input
+                type="email"
+                id="review-email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+
+              <small class="error" id="email-error"></small>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="location"> Location (optional) </label>
+
+              <input
+                type="text"
+                id="review-location"
+                name="location"
+                placeholder="Sydney, NS"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="service"> Service Used </label>
+
+              <select id="review-service" name="service" required>
+                <option value="">Choose a service</option>
+
+                <option>Estate Clear-Out</option>
+
+                <option>Home Staging</option>
+
+                <option>Downsizing Assistance</option>
+
+                <option>Downsizing Assistance</option>
+
+                <option>Senior Move Management</option>
+
+                <option>Property Clean-Up</option>
+
+                <option>Other</option>
+              </select>
+
+              <small class="error" id="service-error"></small>
+            </div>
+          </div>
+
+          <!-- Title -->
+
+          <!-- Review -->
+
+          <div class="form-group">
+            <label for="review"> Your Review </label>
+
+            <textarea
+              id="review"
+              required
+              name="review"
+              rows="7"
+              placeholder="Tell us about your experience — what stood out, how we helped, and what you'd want others to know."
+            ></textarea>
+
+            <small class="error" id="review-error"></small>
+          </div>
+
+          <!-- Button -->
+
+          <button type="submit" id="submitBtn">
+            <span> Submit Review </span>
+
+            <i class="ri-send-plane-fill"></i>
+          </button>
+
+          <p class="agreement">
+            By submitting, you agree we may share your review on our website.
+          </p>
+        </form>
+      </div>
     </section>
     <!-- review form ends -->
 
