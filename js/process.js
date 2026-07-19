@@ -8,7 +8,6 @@ let currentStep = 1;
 
 // Update UI
 function updateProgress() {
-
     // Highlight active steps
     steps.forEach((step, index) => {
         step.classList.toggle("active", index < currentStep);
@@ -32,20 +31,19 @@ function updateProgress() {
         progress.style.width = (end - start) + "px";
     }
 
+    // Scroll ONLY the horizontal container on mobile
     if (window.innerWidth <= 865) {
+        const step = steps[currentStep - 1];
 
-    steps[currentStep - 1].scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest"
-    });
-
-}
+        progressContainer.scrollTo({
+            left: step.offsetLeft - 20,
+            behavior: "smooth"
+        });
+    }
 }
 
 // Auto move every 5 seconds
 function nextStep() {
-
     currentStep++;
 
     if (currentStep > steps.length) {
@@ -64,16 +62,14 @@ updateProgress();
 // Auto play every 5 seconds
 let autoPlay = setInterval(nextStep, 5000);
 
+// Swipe support
 let startX = 0;
 
-const container = document.querySelector(".progress-container");
-
-container.addEventListener("touchstart", e => {
+progressContainer.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
 });
 
-container.addEventListener("touchend", e => {
-
+progressContainer.addEventListener("touchend", (e) => {
     const endX = e.changedTouches[0].clientX;
     const distance = startX - endX;
 
@@ -87,7 +83,7 @@ container.addEventListener("touchend", e => {
         updateProgress();
     }
 
+    // Restart autoplay
     clearInterval(autoPlay);
     autoPlay = setInterval(nextStep, 5000);
-
 });
