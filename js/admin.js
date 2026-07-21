@@ -8,10 +8,10 @@ API URL
 =========================================*/
 
 const API_URL =
-    window.location.hostname === "127.0.0.1" ||
-    window.location.hostname === "localhost"
-        ? "http://localhost:5000"
-        : "";
+  window.location.hostname === "127.0.0.1" ||
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000"
+    : "https://east-coast-estate.onrender.com";
 
 /*=========================================
 DOM ELEMENTS
