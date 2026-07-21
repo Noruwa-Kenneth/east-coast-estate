@@ -616,7 +616,10 @@ select::-ms-expand {
 
   min-height: 18px;
 }
-
+.invalid{
+    border-color:#dc2626 !important;
+    box-shadow:0 0 0 4px rgba(220,38,38,.15);
+}
 /*==============================
   INPUTS
 ==============================*/
@@ -1681,4 +1684,28 @@ select::-ms-expand {
         text-align:center;
     }
 
+}
+/*========== FORM MESSAGE ==========*/
+
+#form-message{
+    display:none;
+    margin:1rem 0;
+    padding:1rem;
+    border-radius:12px;
+    font-size:.95rem;
+    font-weight:500;
+}
+
+#form-message.success{
+    display:block;
+    background:#eafaf1;
+    color:#1d7a3a;
+    border:1px solid #b8e5c7;
+}
+
+#form-message.error{
+    display:block;
+    background:#fff3f3;
+    color:#d93025;
+    border:1px solid #f4b7b7;
 }

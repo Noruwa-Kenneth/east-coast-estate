@@ -465,101 +465,7 @@
       <h2 class="testimonial__title">WHAT OUR CUSTOMERS SAY</h2>
       <p class="testimony">Real stories from families we've helped.</p>
       <div class="testimonial__swiper container swiper">
-        <div class="swiper-wrapper">
-          <article class="testimonial__card swiper-slide">
-            <h3 class="testimonial__name">Phillip</h3>
-
-            <div class="testimonial__rating">
-              <div class="testimonial__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-
-              <h3 class="testimonial__number">5.0</h3>
-            </div>
-
-            <p class="testimonial__description">
-              Working with Kayla was such a positive experience. She’s
-              incredibly kind, professional, and has a real eye for transforming
-              a space. She listened to what I wanted and came up with ideas I
-              never would have thought of. I couldn’t be happier with the
-              results!
-            </p>
-          </article>
-
-          <article class="testimonial__card swiper-slide">
-            <h3 class="testimonial__name">May</h3>
-
-            <div class="testimonial__rating">
-              <div class="testimonial__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-
-              <h3 class="testimonial__number">5.0</h3>
-            </div>
-
-            <p class="testimonial__description">
-              Kayla is a wonderful human who is a burst of sunshine and
-              organization! Full of ideas and very respectful and understanding.
-              Highly recommend her if you are looking for a way to change up
-              your space
-            </p>
-          </article>
-
-          <article class="testimonial__card swiper-slide">
-            <h3 class="testimonial__name">Micheal</h3>
-
-            <div class="testimonial__rating">
-              <div class="testimonial__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-
-              <h3 class="testimonial__number">5.0</h3>
-            </div>
-
-            <p class="testimonial__description">
-              If you’re thinking about updating your home, Kayla is the person
-              to call. She has an amazing sense of style, pays attention to
-              every detail, and makes you feel heard throughout the entire
-              process. It was a pleasure working with her, and I’d recommend her
-              without hesitation.
-            </p>
-          </article>
-
-          <article class="testimonial__card swiper-slide">
-            <h3 class="testimonial__name">Kenneth</h3>
-
-            <div class="testimonial__rating">
-              <div class="testimonial__stars">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-
-              <h3 class="testimonial__number">5.0</h3>
-            </div>
-
-            <p class="testimonial__description">
-              Kayla made the whole process feel easy and stress-free. She’s
-              friendly, organized, and genuinely cares about creating a space
-              that fits your style and needs. I would absolutely recommend her
-              to anyone looking to refresh their home.
-            </p>
-          </article>
-        </div>
+        <div class="swiper-wrapper" id="testimonial-wrapper"></div>
 
         <!-- Pagination -->
         <div class="swiper-pagination"></div>
@@ -602,6 +508,18 @@
     <!-- footer starts -->
     <div id="footer"></div>
     <!-- footer ends -->
+
+    <!-- review modal start -->
+
+    <div class="review-modal" id="reviewModal">
+      <div class="review-modal-content">
+        <button class="close-modal">&times;</button>
+
+        <div id="modal-content"></div>
+      </div>
+    </div>
+    <!-- review modal end -->
+
     <script src="js/script.js"></script>
     <script src="js/include.js"></script>
     <script src="js/process.js"></script>
@@ -611,5 +529,6 @@
     <!--=============== MAIN JS ===============-->
     <script src="swipe/js/main.js"></script>
     <script src="js/image-slider.js"></script>
+    <script src="js/testimonial.js"></script>
   </body>
 </html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | East Coast Estates</title>
+
+    <!-- Remix Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <!--==================== HEADER ====================-->
+
+    <header class="admin-header">
+
+        <div class="container">
+
+            <h1>Review Management</h1>
+
+            <p>
+                Manage customer testimonials before they appear on the website.
+            </p>
+
+        </div>
+
+    </header>
+
+    <!--==================== MAIN ====================-->
+
+    <main class="container">
+
+        <!-- Dashboard Stats -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <h2 id="pending-count">0</h2>
+
+                <p>Pending Reviews</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h2 id="approved-count">0</h2>
+
+                <p>Approved Reviews</p>
+
+            </div>
+
+        </section>
+
+        <!-- Loading -->
+
+        <div
+            id="loading"
+            class="loading-message"
+        >
+
+            Loading reviews...
+
+        </div>
+
+        <!-- Empty State -->
+
+        <div
+            id="empty-state"
+            class="empty-state"
+            style="display:none;"
+        >
+
+            <i class="ri-chat-smile-3-line"></i>
+
+            <h3>No Pending Reviews</h3>
+
+            <p>
+                New customer reviews will appear here for approval.
+            </p>
+
+        </div>
+
+        <!-- Review List -->
+
+        <section
+            id="review-list"
+            class="review-list"
+        >
+
+            <!-- Reviews will be inserted here -->
+
+        </section>
+
+    </main>
+
+    <!--==================== REVIEW MODAL ====================-->
+
+    <div
+        class="review-modal"
+        id="reviewModal"
+    >
+
+        <div class="review-modal-content">
+
+            <button
+                class="close-modal"
+                id="closeModal"
+            >
+
+                &times;
+
+            </button>
+
+            <div id="modal-content"></div>
+
+        </div>
+
+    </div>
+
+    <!--==================== SCRIPT ====================-->
+
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

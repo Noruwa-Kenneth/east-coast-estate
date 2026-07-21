@@ -22,3 +22,28 @@ window.addEventListener("load", () => {
         }, 100);
     }
 });
+
+// 
+function showError(id, message) {
+    document.getElementById(id).textContent = message;
+}
+
+function clearError(id) {
+    document.getElementById(id).textContent = "";
+}
+
+function clearAllErrors() {
+
+    const errors = document.querySelectorAll(".error");
+
+    errors.forEach(error => {
+        error.textContent = "";
+    });
+
+    document
+        .querySelectorAll("input, textarea, select")
+        .forEach(field => {
+            field.classList.remove("invalid");
+        });
+
+}

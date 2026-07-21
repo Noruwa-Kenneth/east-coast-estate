@@ -1,0 +1,483 @@
+/*==================================
+GOOGLE FONT
+==================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*==================================
+ROOT VARIABLES
+==================================*/
+
+:root{
+
+    --primary:#143269;
+    --secondary:#146eb4;
+
+    --success:#16a34a;
+    --danger:#dc2626;
+    --warning:#f59e0b;
+
+    --white:#ffffff;
+    --light:#f7f9fc;
+    --border:#e5e7eb;
+    --text:#555;
+    --title:#222;
+
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+/*==================================
+BASE
+==================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:var(--light);
+
+    color:var(--text);
+
+}
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+/*==================================
+HEADER
+==================================*/
+
+.admin-header{
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color:#fff;
+
+    padding:3rem 0;
+
+    text-align:center;
+
+}
+
+.admin-header h1{
+
+    font-size:2.3rem;
+
+    margin-bottom:.5rem;
+
+}
+
+.admin-header p{
+
+    opacity:.9;
+
+}
+
+/*==================================
+STATS
+==================================*/
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:1.5rem;
+
+    margin:3rem 0;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:2rem;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.stat-card h2{
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+
+    margin-bottom:.4rem;
+
+}
+
+.stat-card p{
+
+    color:#666;
+
+}
+
+/*==================================
+REVIEW LIST
+==================================*/
+
+.review-list{
+
+    display:grid;
+
+    gap:1.5rem;
+
+    margin-bottom:4rem;
+
+}
+
+/*==================================
+CARD
+==================================*/
+
+.review-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:2rem;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*==================================
+TOP
+==================================*/
+
+.review-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:1rem;
+
+    margin-bottom:1rem;
+
+}
+
+.review-name{
+
+    font-size:1.3rem;
+
+    color:var(--title);
+
+}
+
+.review-email{
+
+    color:#666;
+
+    margin-top:.25rem;
+
+}
+
+.review-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+    margin:1rem 0;
+
+    font-size:.95rem;
+
+    color:#666;
+
+}
+
+/*==================================
+STARS
+==================================*/
+
+.review-stars{
+
+    display:flex;
+
+    gap:.2rem;
+
+    color:#f5b301;
+
+    margin-bottom:1rem;
+
+}
+
+/*==================================
+REVIEW TEXT
+==================================*/
+
+.review-text{
+
+    line-height:1.8;
+
+    color:#555;
+
+    margin-bottom:1.5rem;
+
+}
+
+/*==================================
+BUTTONS
+==================================*/
+
+.review-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+}
+
+.review-actions button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:.9rem 1.4rem;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.view-btn{
+
+    background:#f3f4f6;
+
+    color:#333;
+
+}
+
+.view-btn:hover{
+
+    background:#e5e7eb;
+
+}
+
+.approve-btn{
+
+    background:var(--success);
+
+    color:#fff;
+
+}
+
+.approve-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.delete-btn{
+
+    background:var(--danger);
+
+    color:#fff;
+
+}
+
+.delete-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*==================================
+LOADING / EMPTY
+==================================*/
+
+.loading-message,
+.empty-state{
+
+    text-align:center;
+
+    padding:4rem 2rem;
+
+    color:#666;
+
+}
+
+.empty-state i{
+
+    font-size:4rem;
+
+    color:var(--secondary);
+
+    margin-bottom:1rem;
+
+}
+
+.empty-state h3{
+
+    color:var(--primary);
+
+    margin-bottom:.5rem;
+
+}
+
+/*==================================
+MODAL
+==================================*/
+
+.review-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:2rem;
+
+    z-index:9999;
+
+    backdrop-filter:blur(5px);
+
+}
+
+.review-modal.active{
+
+    display:flex;
+
+}
+
+.review-modal-content{
+
+    background:#fff;
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:20px;
+
+    padding:2rem;
+
+    position:relative;
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    animation:popup .3s ease;
+
+}
+
+.close-modal{
+
+    position:absolute;
+
+    right:18px;
+
+    top:18px;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    font-size:2rem;
+
+}
+
+/*==================================
+ANIMATION
+==================================*/
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/*==================================
+RESPONSIVE
+==================================*/
+
+@media (max-width:768px){
+
+    .review-top{
+
+        flex-direction:column;
+
+    }
+
+    .review-actions{
+
+        flex-direction:column;
+
+    }
+
+    .review-actions button{
+
+        width:100%;
+
+    }
+
+    .admin-header h1{
+
+        font-size:1.9rem;
+
+    }
+
+}
