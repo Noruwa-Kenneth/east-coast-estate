@@ -5,7 +5,7 @@ emailjs.init("YNGZBdNTHBeyxjMN0"); //replace with your email public key
 
 //Attach event listener to the form
 window.onload = function() {
-const form = document.querySelector("form");
+const form = document.querySelector("contact-form");
 
 form.addEventListener("submit", function(event){
     event.preventDefault(); //prevent page reload
