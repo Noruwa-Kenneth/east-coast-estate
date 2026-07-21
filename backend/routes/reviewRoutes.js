@@ -12,6 +12,8 @@ const {
 
      getApprovedReviews,
 
+      deleteReview,
+
 } = require("../controllers/reviewController");
 
 /* Submit Review */
@@ -27,6 +29,8 @@ router.get("/pending", getPendingReviews);
 router.patch("/:id/approve", approveReview);
 
 router.get("/", getApprovedReviews);
+
+router.delete("/:id", deleteReview);
 
 
 module.exports = router;

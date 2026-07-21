@@ -40,6 +40,67 @@ const ratingError = document.getElementById("rating-error");
 const stars = document.querySelectorAll(".star-rating i");
 
 /*=========================================
+STAR RATING
+=========================================*/
+
+let selectedRating = 0;
+
+/* Highlight Stars */
+
+function highlightStars(value) {
+
+    stars.forEach((star) => {
+
+        if (Number(star.dataset.value) <= value) {
+
+            star.classList.add("active");
+
+        } else {
+
+            star.classList.remove("active");
+
+        }
+
+    });
+
+}
+
+/* Hover & Click */
+
+stars.forEach((star) => {
+
+    star.addEventListener("mouseover", () => {
+
+        highlightStars(Number(star.dataset.value));
+
+    });
+
+    star.addEventListener("click", () => {
+
+        selectedRating = Number(star.dataset.value);
+
+        rating.value = selectedRating;
+
+        highlightStars(selectedRating);
+
+        document.querySelector(".rating-text").textContent =
+            `${selectedRating} / 5`;
+
+        clearError(ratingError);
+
+    });
+
+});
+
+/* Restore Selection */
+
+document.querySelector(".star-rating").addEventListener("mouseleave", () => {
+
+    highlightStars(selectedRating);
+
+});
+
+/*=========================================
   HELPER FUNCTIONS
 =========================================*/
 
