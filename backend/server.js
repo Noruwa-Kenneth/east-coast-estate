@@ -109,12 +109,22 @@ require("dotenv").config();
 
 const pool = require("./config/db");
 const reviewRoutes = require("./routes/reviewRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.post("/debug", (req, res) => {
+    console.log("DEBUG BODY:", req.body);
+
+    res.json({
+        body: req.body
+    });
+});
 app.use("/reviews", reviewRoutes);
+app.use("/admin", adminRoutes);
 
 app.get("/", (req, res) => {
     res.send("East Coast Estates API is running...");

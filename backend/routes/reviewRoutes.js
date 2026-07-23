@@ -1,36 +1,47 @@
+const verifyToken = require("../middleware/authMiddleware");
+
 const express = require("express");
 
 const router = express.Router();
 
 const {
+  createReview,
 
-    createReview,
+  getPendingReviews,
 
-    getPendingReviews,
+  approveReview,
 
-    approveReview,
+  getApprovedReviews,
 
-     getApprovedReviews,
+   getFeaturedReviews,
 
-      deleteReview,
+  deleteReview,
 
+  featureReview,
+  
 } = require("../controllers/reviewController");
 
 /* Submit Review */
+/*=========================================
+PUBLIC ROUTES
+=========================================*/
 
 router.post("/", createReview);
 
-/* Get Pending Reviews */
-
-router.get("/pending", getPendingReviews);
-
-// Approve Review
-
-router.patch("/:id/approve", approveReview);
-
 router.get("/", getApprovedReviews);
 
-router.delete("/:id", deleteReview);
+router.get("/featured", getFeaturedReviews);
 
+/*=========================================
+PROTECTED ADMIN ROUTES
+=========================================*/
+
+router.get("/pending", verifyToken, getPendingReviews);
+
+router.patch("/:id/approve", verifyToken, approveReview);
+
+router.patch("/:id/feature", verifyToken, featureReview);
+
+router.delete("/:id", verifyToken, deleteReview);
 
 module.exports = router;

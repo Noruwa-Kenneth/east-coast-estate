@@ -20,7 +20,7 @@ FETCH APPROVED REVIEWS
 
 async function fetchTestimonials() {
   try {
-    const response = await fetch(`${API_URL}/reviews`);
+    const response = await fetch(`${API_URL}/reviews/featured`);
 
     const data = await response.json();
 
@@ -28,7 +28,7 @@ async function fetchTestimonials() {
       throw new Error(data.message);
     }
 
-    console.log("Approved Reviews:", data.reviews);
+    console.log("Featured Reviews:", data.reviews);
 
     return data.reviews;
   } catch (error) {
