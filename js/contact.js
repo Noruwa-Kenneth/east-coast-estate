@@ -19,7 +19,13 @@ form.addEventListener("submit", async (e) => {
     submitBtn.innerHTML = `
         <i class="ri-loader-4-line"></i> Sending...
     `;
-    const response = await fetch("http://localhost:5000/contact", {
+    const API_URL =
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1"
+        ? "http://localhost:5000"
+        : "https://east-coast-estate.onrender.com";
+
+    const response = await fetch(`${API_URL}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
