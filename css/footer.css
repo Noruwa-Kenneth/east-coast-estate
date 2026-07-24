@@ -112,11 +112,11 @@
   text-decoration: none;
   transition: 0.3s;
   z-index: 10;
-  color: #e7db36;
+  color: #f0d22d;
 }
 
 .social-icons a:hover {
-  background: #fffdfd;
+  background: #ffffff;
   color: #144261;
   transform: translateY(-4px);
 }

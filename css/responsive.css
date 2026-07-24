@@ -376,12 +376,12 @@
     gap: 60px;
   }
 
-  .contact-content{
+  .contact-contents{
     max-width: 100%;
     text-align: center;
   }
 
-  .contact-content h2{
+  .contact-contents h2{
     font-size: 36px;
   }
 
@@ -411,11 +411,11 @@
     gap:45px;
   }
 
-  .contact-content h2{
+  .contact-contents h2{
     font-size:30px;
   }
 
-  .contact-content p{
+  .contact-contents p{
     font-size:15px;
     line-height:1.8;
   }
@@ -453,11 +453,11 @@
     padding:60px 0;
   }
 
-  .contact-content h2{
+  .contact-contents h2{
     font-size:26px;
   }
 
-  .contact-content p{
+  .contact-contents p{
     font-size:14px;
   }
 

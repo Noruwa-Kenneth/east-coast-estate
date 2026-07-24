@@ -43,7 +43,7 @@
   min-height: 340px;
   background-color: rgb(10, 73, 116);
   box-shadow: 0 8px 16px hsla(265, 75%, 4%, 0.1);
-  padding: 1rem 1.5rem 10rem;
+   padding: 1rem 1.3rem 1rem;
   border-radius: 1.5rem;
   text-align: center;
   display: flex;
@@ -105,7 +105,7 @@
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -167,6 +167,15 @@
   color: var(--light);
   border-radius: 50%;
   font-size: 1.5rem;
+}
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: px) {
+  .testimonial__title {
+    font-size: 1.25rem;
+  }
 }
 
 /*=============== BREAKPOINTS ===============*/

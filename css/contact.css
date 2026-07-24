@@ -392,6 +392,75 @@ select::-ms-expand {
 
 }
 
+/*=========================================
+CONTACT - MOBILE
+=========================================*/
+
+@media (max-width: 768px) {
+
+  .contact-card{
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+  }
+
+  .contact-left{
+    min-height: auto;
+  }
+
+  .contact-content{
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-content h2{
+    font-size: 1.6rem;
+  }
+
+  .contact-content > p{
+    margin-bottom: 2rem;
+  }
+
+  .contact-list{
+    gap: 1.25rem;
+  }
+
+  .contact-info{
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .contact-info .icon{
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .contact-info .icon i{
+    font-size: 16px;
+  }
+
+  .contact-info small{
+    font-size: .72rem;
+    letter-spacing: 1px;
+  }
+
+  .contact-info a,
+  .contact-info p{
+    font-size: .95rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .contact-right{
+    padding: 2rem 1.5rem;
+  }
+
+  .form-grid{
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 
 /*=============== REVIEW SECTION ===============*/
 
